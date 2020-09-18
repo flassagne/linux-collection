@@ -1,0 +1,26 @@
+### REQUIRED
+
+
+namespace: fla
+name: workstation
+version: 1.0.0
+readme: README.md
+authors:
+  - fabien.lassagne@gmail.com
+
+description: Usefull roles, plays and plugins to configure my workstation
+
+license:
+  - GPL-2.0-or-later
+
+tags: 
+  - configure
+  - linux
+  - workstation
+
+dependencies: {}
+
+repository: https://github.com/flassagne/workstation.git
+documentation: 
+homepage: 
+issues: https://github.com/flassagne/workstation/issues
