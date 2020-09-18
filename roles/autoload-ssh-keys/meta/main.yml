@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Fabien Lassagne
+  description: configure ksshaskpass to load automatically ssh keys
+
+  license: license (GPL-2.0-or-later, MIT, etc)
+
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: Debian
+    versions:
+    - buster
+
+  galaxy_tags: 
+    - linux
+    - ssh
+    - configure
+
+dependencies: []
+  

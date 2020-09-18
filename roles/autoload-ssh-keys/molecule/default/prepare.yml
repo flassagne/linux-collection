@@ -1,0 +1,52 @@
+# -*- mode: ansible -*-
+---
+- name: Prepare
+  hosts: all
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Init ssh directory
+      file:
+        state: directory
+        path: ~/.ssh
+
+    - name: Install stub ssh key
+      copy:
+        mode: 0700
+        content: "{{ item.content }}"
+        dest: ~/.ssh/{{ item.name }}
+      loop:
+        - name: id_rsa_stub
+          content: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            rFCsBs/w==
+            -----END OPENSSH PRIVATE KEY-----
+        - name: id_rsa_stub.pub
+          content: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDp0R+YQNNIJLSenQajhAYhsjWQoszzI8y6r9rSwQgxYQekNK1rugd5qKSWyPOSWZ8fnn2AEk6GSzqMVE/tebdDimmzKibKFrP97Is00BS2y4BvFpF5LhdZzP4utbotOt0or8GJN5AOLqCUg9o5i/Cf4X1eUi92Fp9RpJi6IWcctaFaK6EkMMFCYcF+fTencyBM9M0qKc3Ro5XfHAr9E0j5vt+/8Ir+eIGYROfOC68DYl8AXd/Ug6DVf6xI3TFZyXSk41W0l1kjrADZ3rnucjnXAHANKCVDTGB/MU9B6jn7585i+WnsLnFanAYGoUypWStCW+IX24bMW/N6ZgVr7BDN fla@puce

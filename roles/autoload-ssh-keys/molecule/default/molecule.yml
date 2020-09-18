@@ -1,0 +1,13 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: debian
+    image: python:3.7-buster
+    pre_build_image: True
+provisioner:
+  name: ansible
+verifier:
+  name: testinfra

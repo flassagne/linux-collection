@@ -1,0 +1,23 @@
+# -*- mode: ansible -*-
+
+---
+# tasks file for autoload_ssh_keys
+- fail:
+    msg: Supply ssh keys with ssh_keys array var
+  when: ssh_keys == []
+
+- name: Install prereq ksshaskpass
+  apt: 
+    name: ksshaskpass
+
+- name: Configure ssh keys passphrase handler "ask_pass.sh"
+  copy:
+    mode: 0744
+    src: ask_pass.sh
+    dest: "{{ autostart_script_path }}"
+
+- name: Install autoloading ssh keys script "ssh_add.sh"
+  template:
+    mode: 0744
+    src: ssh_add.sh
+    dest: "{{ autostart_script_path }}"

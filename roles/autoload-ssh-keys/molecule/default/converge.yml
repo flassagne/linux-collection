@@ -1,0 +1,10 @@
+# -*- mode: ansible -*-
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: Include autoload_ssh_keys
+      vars:
+        ssh_keys: [ "id_rsa_stub" ]
+      include_role:
+        name: autoload_ssh_keys

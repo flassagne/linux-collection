@@ -1,0 +1,3 @@
+---
+# defaults file for autoload_ssh_keys
+ssh_keys: []
