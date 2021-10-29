@@ -2,7 +2,7 @@
 
 
 namespace: fla
-name: workstation
+name: linux
 version: 1.0.0
 readme: README.md
 authors:
@@ -13,14 +13,15 @@ description: Usefull roles, plays and plugins to configure my workstation
 license:
   - GPL-2.0-or-later
 
-tags: 
+tags:
   - configure
   - linux
-  - workstation
+  - station
 
-dependencies: {}
+dependencies:
+  community.general: ">=3.7.0"
 
-repository: https://github.com/flassagne/workstation.git
-documentation: 
-homepage: 
-issues: https://github.com/flassagne/workstation/issues
+repository: https://github.com/flassagne/linux-collection.git
+documentation:
+homepage:
+issues: https://github.com/flassagne/linux-collection/issues
