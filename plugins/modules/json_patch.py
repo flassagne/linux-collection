@@ -1,0 +1,1 @@
+../../vendors/ansible-jsonpatch/json_patch.py
