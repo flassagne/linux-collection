@@ -1,0 +1,17 @@
+---
+# tasks file for vscode
+- name: Install vscode
+  when: ansible_facts['distribution'] == "Archlinux"
+  include_tasks: arch.yml
+
+- name: Install vscode extensions
+  changed_when: no
+  ignore_errors: yes
+  command: "code --install-extension {{ item }}"
+  loop: "{{ vscode_extensions }}"
+
+- name: Create workspace directory
+  file:
+    dest: "{{ vscode_workspaces_dir }}"
+    state: directory
+    mode: "u=rwx,g=rw,o=x"

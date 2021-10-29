@@ -1,0 +1,5 @@
+---
+# defaults file for vscode
+vscode_user_config:
+vscode_extensions:
+vscode_workspaces_dir: $HOME/.vscode/workspaces

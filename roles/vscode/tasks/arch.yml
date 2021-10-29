@@ -1,0 +1,28 @@
+---
+# tasks file for vscode
+- name: Install code packages
+  become: yes
+  pacman:
+    name: code
+    state: installed
+
+- name: Patch 'product.json' to use windows marketplace
+  become: yes
+  json_patch:
+    src: /usr/lib/code/product.json
+    pretty: yes
+    operations:
+      - op: replace
+        path: /extensionsGallery
+        value: {
+          "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+          "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
+          "itemUrl": "https://marketplace.visualstudio.com/items"
+        }
+
+- name: Set user config
+  when: vscode_user_config is defined
+  copy:
+    dest: $HOME/.config/Code - OSS/User/settings.json
+    mode: o644
+    content: "{{ vscode_user_config | to_json }}"
