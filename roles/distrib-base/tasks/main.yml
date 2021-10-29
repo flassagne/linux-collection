@@ -1,0 +1,5 @@
+---
+# tasks file for distrib-base
+- name: Install ArchLinux base
+  when: ansible_facts['distribution'] == "Archlinux"
+  include_tasks: arch.yml

@@ -1,0 +1,9 @@
+- name: Install base packages
+  become: yes
+  pacman:
+    update_cache: yes
+    state: installed
+    name:
+      - yay
+      - python-pip
+      - python-pipx
