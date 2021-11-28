@@ -1,0 +1,18 @@
+---
+# tasks file for devops
+
+- name: Install and configure ansible
+  when: enable_ansible
+  import_tasks: ansible.yml
+
+- name: Install and configure terraform
+  when: enable_terraform
+  import_tasks: terraform.yml
+
+- name: Install and configure packer
+  when: enable_packer
+  import_tasks: packer.yml
+
+- name: Install and configure kube
+  when: enable_kube
+  import_tasks: kube.yml

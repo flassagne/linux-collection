@@ -1,0 +1,14 @@
+- name: Install kube stack
+  when: ansible_facts['distribution'] == "Archlinux"
+  pacman:
+    name:
+      - kubectl
+      - kubectx
+      - kustomize
+      - k9s
+      - helm
+      - argocd
+
+- name: Install shell completion
+  when: enable_shell_completion
+  shell: kubectl completion {{ shell }} > $HOME/.{{ shell }}_completion.d/kubectl

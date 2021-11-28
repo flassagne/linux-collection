@@ -1,0 +1,13 @@
+---
+# tasks file for tools
+- name: Install xwin tools
+  when: ansible_facts['distribution'] == 'Archlinux'
+  become: yes
+  pacman:
+    name:
+      - yakuake
+      - remmina
+      - freerdp
+      - flameshot
+      - chromium
+    state: installed

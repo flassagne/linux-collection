@@ -20,6 +20,7 @@ tags:
 
 dependencies:
   community.general: ">=3.7.0"
+  kewlfft.aur: ">=0.9.1"
 
 repository: https://github.com/flassagne/linux-collection.git
 documentation:

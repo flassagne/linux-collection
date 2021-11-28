@@ -1,0 +1,5 @@
+---
+# defaults file for tools
+enable_cli_tools: no
+enable_dev_tools: no
+enable_desktop_tools: no

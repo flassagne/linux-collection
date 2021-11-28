@@ -1,0 +1,9 @@
+---
+# tasks file for cloud
+- name: Install and configure gcp
+  when: enable_gcp
+  import_tasks: gcp.yml
+
+- name: Install and configure aws
+  when: enable_aws
+  import_tasks: aws.yml

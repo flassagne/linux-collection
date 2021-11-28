@@ -1,0 +1,13 @@
+---
+# tasks file for dotfiles
+- name: Create a ditfiles directory
+  file:
+    state: directory
+    dest: ~/.dotfiles
+    mode: o644
+
+- name: Set dotfiles
+  include_tasks: repo.yml
+  loop: "{{ dotfiles_repos }}"
+  loop_control:
+    loop_var: repo

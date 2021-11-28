@@ -1,0 +1,6 @@
+---
+# tasks file for cloud
+- name: Install google-cloud-sdk
+  kewlfft.aur.aur:
+    name: google-cloud-sdk
+    state: present

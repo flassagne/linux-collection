@@ -1,0 +1,5 @@
+---
+# defaults file for dotfiles
+dotfiles_repos: []
+# - name: <name>
+#    url: <url>

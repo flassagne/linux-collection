@@ -1,0 +1,5 @@
+---
+# tasks file for font
+- name: Configure archlinux fontinal
+  when: ansible_facts['distribution'] == "Archlinux"
+  import_tasks: arch.yml

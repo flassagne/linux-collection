@@ -1,0 +1,18 @@
+- name: Install ansible
+  pip:
+    name: ansible
+    version: "{{ ansible_version }}"
+
+- name: Install ansible shell completion
+  when: enable_shell_completion
+  block:
+    - name: Install argcomplete
+      pip:
+        name: argcomplete
+    - name: Enable completion
+      command: activate-global-python-argcomplete
+
+- name: Create vaults directory
+  file:
+    path: .ansible/vaults
+    state: directory
