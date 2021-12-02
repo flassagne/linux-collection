@@ -1,2 +1,9 @@
 ---
 # tasks file for tools
+- name: Install dev tools
+  when: ansible_facts['distribution'] == 'Archlinux'
+  become: yes
+  pacman:
+    name:
+      - nodejs
+    state: installed
