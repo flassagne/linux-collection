@@ -8,9 +8,11 @@
       - jq
       - vim
       - tree
+      - npm
     state: installed
 
 - name: Install gitmoji
+  become: yes
   npm:
     global: yes
     name: gitmoji-cli
