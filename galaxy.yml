@@ -1,7 +1,6 @@
 ### REQUIRED
 
-
-namespace: fla
+namespace: flassagne
 name: linux
 version: 1.0.0
 readme: README.md
