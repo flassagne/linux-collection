@@ -1,0 +1,19 @@
+---
+# tasks file for tools
+- name: Install cli tools
+  when: ansible_facts['distribution'] == 'Archlinux'
+  become: yes
+  pacman:
+    name:
+      - jq
+      - vim
+      - tree
+      - npm
+    state: installed
+
+- name: Install gitmoji
+  become: yes
+  npm:
+    global: yes
+    name: gitmoji-cli
+    state: present

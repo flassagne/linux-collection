@@ -1,0 +1,10 @@
+---
+# tasks file for tools
+- name: Install net tools
+  when: ansible_facts['distribution'] == 'Archlinux'
+  become: yes
+  pacman:
+    name:
+      - traceroute
+      - nmap
+    state: installed

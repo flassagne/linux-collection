@@ -1,0 +1,19 @@
+- name: Download dotfiles' repo
+  git:
+    repo: "{{ repo.url }}"
+    dest: "~/.dotfiles/{{ repo.name }}"
+
+- name: list all files under ~/.dotfiles
+  register: dotfiles
+  changed_when: false
+  command:
+    cmd: find . -path *.git -prune -o -name *.md -o -type d -o -print
+    chdir: "~/.dotfiles/{{ repo.name }}"
+
+- name: Link dotfiles
+  file:
+    state: link
+    force: yes
+    src: "~/.dotfiles/{{ repo.name }}/{{ item }}"
+    path: "~/{{ item }}"
+  loop: "{{ dotfiles.stdout_lines }}"

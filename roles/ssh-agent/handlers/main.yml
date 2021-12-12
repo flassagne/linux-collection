@@ -1,0 +1,8 @@
+---
+# handlers file for ssh-agent
+- name: Start ssh-agent service
+  systemd:
+    name: ssh-agent.service
+    state: started
+    enabled: yes
+    scope: user

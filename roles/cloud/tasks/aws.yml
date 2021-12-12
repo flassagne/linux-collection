@@ -1,0 +1,6 @@
+---
+# tasks file for cloud
+- name: Install aws-cli
+  pacman:
+    name: aws-cli
+    state: present

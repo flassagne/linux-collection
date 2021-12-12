@@ -1,0 +1,4 @@
+---
+# defaults file for cloud
+enable_gcp: no
+enable_aws: no

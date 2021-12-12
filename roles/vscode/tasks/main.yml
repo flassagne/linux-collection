@@ -6,7 +6,6 @@
 
 - name: Install vscode extensions
   changed_when: no
-  ignore_errors: yes
   command: "code --install-extension {{ item }}"
   loop: "{{ vscode_extensions }}"
 

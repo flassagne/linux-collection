@@ -1,0 +1,8 @@
+---
+# tasks file for font
+- name: Install fonts
+  become: yes
+  pacman:
+    name:
+      - noto-fonts-emoji
+      - ttf-fira-code

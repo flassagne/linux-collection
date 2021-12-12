@@ -1,0 +1,12 @@
+---
+# tasks file for ssh-agent
+- name: Set ssh-agent service
+  notify: Start ssh-agent service
+  copy:
+    src: ssh-agent.service
+    dest: .config/systemd/user/ssh-agent.service
+
+- name: Export the SSH_AUTH_SOCK var
+  lineinfile:
+    dest: .bashrc
+    line: export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
