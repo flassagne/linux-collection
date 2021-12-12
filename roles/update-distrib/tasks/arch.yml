@@ -8,3 +8,9 @@
       - python-pip
       - python-pipx
       - base-devel
+
+- name: Create user {{ shell }} completion directory
+  when: enable_shell_completion
+  file:
+    path: $HOME/.{{ shell }}_completion.d
+    state: directory
