@@ -1,5 +1,6 @@
 - name: Install kube stack
   when: ansible_facts['distribution'] == "Archlinux"
+  become: yes
   pacman:
     name:
       - kubectl
