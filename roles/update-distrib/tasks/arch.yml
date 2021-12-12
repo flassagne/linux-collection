@@ -7,3 +7,4 @@
       - yay
       - python-pip
       - python-pipx
+      - base-devel
