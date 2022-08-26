@@ -18,7 +18,7 @@ tags:
   - station
 
 dependencies:
-  community.general: ">=3.7.0"
+  community.general: ">=5.5.0"
   kewlfft.aur: ">=0.9.1"
 
 repository: https://github.com/flassagne/linux-collection.git

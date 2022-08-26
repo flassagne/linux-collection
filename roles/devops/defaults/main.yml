@@ -6,6 +6,6 @@ enable_terraform: no
 enable_packer: no
 enable_shell_completion: no
 
-ansible_version: "4.7.0"
+ansible_version: "6.3.0"
 terraform_version: "1.0.10"
 packer_version: "1.7.8"

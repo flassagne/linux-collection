@@ -9,5 +9,11 @@
       - freerdp
       - flameshot
       - chromium
-      - tdrop
     state: installed
+
+# - name: Install aur package
+#   kewlfft.aur.aur:
+#     name: 
+#       - slack-desktop
+#       - tdrop
+#     state: present

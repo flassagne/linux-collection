@@ -6,10 +6,11 @@
   pacman:
     name:
       - nodejs
+      - python-pip-run
     state: installed
 
-- name: Install cargo
-  shell: curl https://sh.rustup.rs -sSf | sh
+# - name: Install cargo
+#   shell: curl https://sh.rustup.rs -sSf | sh -y
 
-- name: Install poetry
-  shell: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+# - name: Install poetry
+#   shell: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -

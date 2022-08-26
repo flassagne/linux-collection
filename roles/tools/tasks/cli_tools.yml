@@ -19,9 +19,11 @@
     name: gitmoji-cli
     state: present
 
-- name: Install Rust packages
-  community.general.cargo:
-    name: ludusavi
-  list:
-    - delta
-    - zellij
+# - name: Install Rust packages
+#   community.general.cargo:
+#     name:
+#       - delta
+#       - zellij
+
+# - name: Install starship
+#   shell: curl -sS https://starship.rs/install.sh | sh

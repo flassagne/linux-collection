@@ -10,6 +10,6 @@
       - helm
       - argocd
 
-- name: Install shell completion
-  when: enable_shell_completion
-  shell: kubectl completion {{ shell }} > $HOME/.{{ shell }}_completion.d/kubectl
+# - name: Install shell completion
+#   when: enable_shell_completion
+#   shell: kubectl completion {{ shell }} > $HOME/.{{ shell }}_completion.d/kubectl
