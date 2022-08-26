@@ -1,12 +1,12 @@
 ---
 # tasks file for tools
-- name: Install cli tools
-  when: enable_cli_tools
-  import_tasks: cli_tools.yml
-
 - name: Install dev tools
   when: enable_dev_tools
   import_tasks: dev_tools.yml
+
+- name: Install cli tools
+  when: enable_cli_tools
+  import_tasks: cli_tools.yml
 
 - name: Install net tools
   when: enable_net_tools

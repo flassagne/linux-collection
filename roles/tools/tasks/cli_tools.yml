@@ -9,6 +9,7 @@
       - vim
       - tree
       - npm
+      - fish
     state: installed
 
 - name: Install gitmoji
@@ -17,3 +18,10 @@
     global: yes
     name: gitmoji-cli
     state: present
+
+- name: Install Rust packages
+  community.general.cargo:
+    name: ludusavi
+  list:
+    - delta
+    - zellij

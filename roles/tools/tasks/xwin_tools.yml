@@ -5,9 +5,9 @@
   become: yes
   pacman:
     name:
-      - yakuake
       - remmina
       - freerdp
       - flameshot
       - chromium
+      - tdrop
     state: installed
